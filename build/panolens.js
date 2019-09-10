@@ -4793,15 +4793,23 @@
 	    this.src = src;
 
 	    this.options = {
+	        /**
+	         *removing the conflicting code
+	         */
+	        /**
+	         *videoElement: document.createElement( 'video' ),
+	         *loop: true,
+	         *muted: true,
+	         *autoplay: false,
+	         *playsinline: true,
+	         *crossOrigin: 'anonymous'
+	         */
 
 	        videoElement: document.createElement( 'video' ),
-	        loop: true,
-	        muted: true,
-	        autoplay: false,
 	        playsinline: true,
 	        crossOrigin: 'anonymous'
-
 	    };
+
 
 	    Object.assign( this.options, options );
 
@@ -4873,7 +4881,12 @@
 	            // For mobile silent autoplay
 	            if ( this.isMobile() ) {
 
-	                video.pause();
+	                /**
+	                 *removing the conflicting code
+	                 */
+	                /**
+	                 *video.pause();
+	                 */
 
 	                if ( autoplay && muted ) {
 
